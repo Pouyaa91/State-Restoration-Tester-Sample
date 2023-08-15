@@ -21,6 +21,7 @@ class StateRestoreTest {
         val restorationTester = StateRestorationTester(rule)
 
         restorationTester.setContent { ClickCounter() }
+        
         rule.onNodeWithText("Add 1").performClick()
 
         restorationTester.emulateSavedInstanceStateRestore()
